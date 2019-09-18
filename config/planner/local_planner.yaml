@@ -1,0 +1,17 @@
+DWAPlannerROS:
+  max_trans_vel: 0.3 # It can go faster
+  min_trans_vel: 0.1
+  min_rot_vel: -0.5
+  max_rot_vel: 0.5
+  min_in_place_vel_theta: 0.4
+
+  acc_lim_theta: 3.2
+  acc_lim_x: 2.5
+  acc_lim_y: 0.0
+
+  holonomic_robot: false
+  meter_scoring: true
+
+  # FIXME: Decrease these
+  yaw_goal_tolerance: 0.5
+  xy_goal_tolerance: 0.5
