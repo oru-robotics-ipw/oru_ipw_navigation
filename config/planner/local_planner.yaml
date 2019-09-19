@@ -15,3 +15,6 @@ DWAPlannerROS:
   # FIXME: Decrease these
   yaw_goal_tolerance: 0.5
   xy_goal_tolerance: 0.5
+
+  sim_granularity: 0.05
+  
