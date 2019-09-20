@@ -1,8 +1,8 @@
 DWAPlannerROS:
-  max_trans_vel: 0.3 # It can go faster
+  max_trans_vel: 0.5 # It can go faster
   min_trans_vel: 0.1
-  min_rot_vel: -0.5
-  max_rot_vel: 0.5
+  min_rot_vel: -0.7
+  max_rot_vel: 0.7
   min_in_place_vel_theta: 0.4
 
   acc_lim_theta: 3.2
