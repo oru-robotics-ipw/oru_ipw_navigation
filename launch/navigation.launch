@@ -6,10 +6,10 @@
     <param name="controller_frequency" value="5.0" />
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="base_global_planner" value="global_planner/GlobalPlanner" />
-    <rosparam file="$(find oru_ipw_navigation)/config/costmap/common.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find oru_ipw_navigation)/config/costmap/common.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find oru_ipw_navigation)/config/costmap/common.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find oru_ipw_navigation)/config/costmap/local.yaml" command="load" />
-    <rosparam file="$(find oru_ipw_navigation)/config/costmap/global.yaml" command="load" /> 
+    <rosparam file="$(find oru_ipw_navigation)/config/costmap/global.yaml" command="load" />
     <rosparam file="$(find oru_ipw_navigation)/config/planner/global_planner.yaml" command="load" />
     <rosparam file="$(find oru_ipw_navigation)/config/planner/local_planner.yaml" command="load" />
   </node>
