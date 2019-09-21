@@ -1,9 +1,12 @@
 DWAPlannerROS:
-  max_trans_vel: 0.5 # It can go faster
   min_trans_vel: 0.1
-  min_rot_vel: -0.7
+  max_trans_vel: 0.5 # It can go faster
+  min_vel_x: 0.1
+  max_vel_x: 0.5 # It can go faster
+  min_rot_vel: 0.3
   max_rot_vel: 0.7
-  min_in_place_vel_theta: 0.4
+  min_vel_y: 0
+  max_vel_y: 0
 
   acc_lim_theta: 3.2
   acc_lim_x: 2.5
@@ -16,7 +19,7 @@ DWAPlannerROS:
   yaw_goal_tolerance: 0.25
   xy_goal_tolerance: 0.25
 
-  sim_time: 2.7
+  sim_time: 3.5
   sim_granularity: 0.1
   path_distance_bias: 24
   oscillation_reset_dist: 0.1

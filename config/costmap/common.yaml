@@ -1,45 +1,47 @@
-obstacle_range: 2.5
-raytrace_range: 3.0
 footprint: [[-0.2, -0.29], [-0.2, 0.29], [0.56, 0.29], [0.56, -0.29]]
-#robot_radius: ir_of_robot
-inflation_radius: 0.55
+robot_radius: 0.0
 transform_tolerance: 0.5  # TODO: Try to reduce
 publish_frequency: 0.25
-update_frequency: 2.0
 
-max_obstacle_height: 2.0
+# Layer configuration
+obstacles:
+  obstacle_range: 2.5
+  raytrace_range: 3.0
+  max_obstacle_height: 2.0
+  observation_sources: velodyne_obstacles
 
-observation_sources: stage_scan velodyne_obstacles
+  velodyne_obstacles: 
+    data_type: PointCloud2
+    topic: /sensors/laser/velodyne_obstacles
+    marking: true
+    clearing: true
+    expected_update_rate: 0.0
+  velodyne_scan: 
+    data_type: LaserScan
+    topic: /sensors/laser/scan
+    marking: true
+    clearing: true
+    expected_update_rate: 0.0
+  velodyne_cloud:
+    data_type: PointCloud2
+    topic: /sensors/laser/velodyne_points
+    marking: true
+    clearing: true
+    expected_update_rate: 0.5
 
-velodyne_obstacles: 
-  data_type: PointCloud2
-  topic: /sensors/laser/velodyne_obstacles
-  marking: true
-  clearing: true
-  expected_update_rate: 0.0
-velodyne_scan: 
-  data_type: LaserScan
-  topic: /sensors/laser/scan
-  marking: true
-  clearing: true
-  expected_update_rate: 0.0
-velodyne_cloud:
-  data_type: PointCloud2
-  topic: /sensors/laser/velodyne_points
-  marking: true
-  clearing: true
-  expected_update_rate: 0.5
+  realsense_sensor:
+    data_type: PointCloud2
+    topic: /sensors/camera/depth/color/points
+    marking: true
+    clearing: true
+    expected_update_rate: 0.2
 
-realsense_sensor:
-  data_type: PointCloud2
-  topic: /sensors/camera/depth/color/points
-  marking: true
-  clearing: true
-  expected_update_rate: 0.2
+  stage_scan: 
+    data_type: LaserScan
+    topic: /base_scan
+    marking: true
+    clearing: true
+    expected_update_rate: 0.0
 
-stage_scan: 
-  data_type: LaserScan
-  topic: /base_scan
-  marking: true
-  clearing: true
-  expected_update_rate: 0.0
+inflation:
+  inflation_radius: 0.55
