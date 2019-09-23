@@ -3,6 +3,8 @@
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <remap from="odom" to="$(arg hrp_ns)odom" />
     <remap from="cmd_vel" to="$(arg hrp_ns)cmd_vel" />
+    <remap from="map" to="/planning/map" />
+    <remap from="/static_map" to="/planning/static_map" />
     <param name="controller_frequency" value="5.0" />
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="base_global_planner" value="global_planner/GlobalPlanner" />
