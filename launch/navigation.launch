@@ -1,5 +1,8 @@
 <launch>
   <arg name="hrp_ns" default="/hrp/" />
+
+  <rosparam command="load" file="$(find social_compliance_layer)/cfg/behavior_parameters.yaml" />
+
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <remap from="odom" to="$(arg hrp_ns)odom" />
     <remap from="cmd_vel" to="$(arg hrp_ns)cmd_vel" />
