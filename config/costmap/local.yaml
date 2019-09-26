@@ -17,7 +17,4 @@ local_costmap:
   # Layer configuration
   #obstacles:
   #inflation:
-  social_compliance:
-    goal_topic: /move_base_simple/goal
-    people_topic: /spencer/perception/tracked_persons_confirmed_by_HOG_or_upper_body_or_moving
-    groups_topic: /spencer/perception/tracked_groups
+  #social_compliance:

@@ -24,7 +24,8 @@ obstacles:
     marking: true
     clearing: true
     expected_update_rate: 0.0
-    obstacle_range: 15
+    obstacle_range: 14.5
+    raytrace_range: 15
   velodyne_scan: 
     data_type: LaserScan
     topic: /sensors/laser/scan
@@ -59,3 +60,13 @@ obstacles:
 
 inflation:
   inflation_radius: 0.55
+
+social_compliance:
+  goal_topic: /move_base_simple/goal
+  groups_topic: /spencer/perception/tracked_groups
+  people_topic: /spencer/perception/tracked_persons_confirmed_by_HOG_or_upper_body_or_moving
+  behavior_name: polite
+  dynamic_scene: true
+  human_radius: 0.4
+  prediction_horizon: 3
+  scaled: true
