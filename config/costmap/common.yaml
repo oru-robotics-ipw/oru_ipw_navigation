@@ -9,7 +9,7 @@ obstacles:
   raytrace_range: 3.0
   min_obstacle_height: 0.05
   max_obstacle_height: 2.0
-  observation_sources: velodyne_multiscan realsense_sensor
+  observation_sources: velodyne_multiscan camera_astra
 
   velodyne_obstacles: 
     data_type: PointCloud2
@@ -41,9 +41,17 @@ obstacles:
     expected_update_rate: 0.5
     obstacle_range: 15
 
-  realsense_sensor:
+  camera_realsense:
     data_type: PointCloud2
     topic: /sensors/camera/depth/color/points
+    marking: true
+    clearing: true
+    expected_update_rate: 0.2
+    min_obstacle_height: 0.02
+    obstacle_range: 1.5
+  camera_astra:
+    data_type: PointCloud2
+    topic: /sensors/camera/depth/points
     marking: true
     clearing: true
     expected_update_rate: 0.2
