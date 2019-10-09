@@ -9,7 +9,7 @@ obstacles:
   raytrace_range: 3.0
   min_obstacle_height: 0.05
   max_obstacle_height: 2.0
-  observation_sources: velodyne_multiscan camera_astra
+  observation_sources: velodyne_multiscan camera_summary
 
   velodyne_obstacles: 
     data_type: PointCloud2
@@ -52,6 +52,16 @@ obstacles:
   camera_astra:
     data_type: PointCloud2
     topic: /sensors/camera/depth/points
+    marking: true
+    clearing: true
+    expected_update_rate: 0.2
+    min_obstacle_height: 0.02
+    obstacle_range: 1.5
+
+  # Low resolution summary of obstacles found by camera processing node.
+  camera_summary:
+    data_type: PointCloud2
+    topic: /sensors/camera/subsampled_points
     marking: true
     clearing: true
     expected_update_rate: 0.2
