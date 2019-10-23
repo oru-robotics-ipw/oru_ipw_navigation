@@ -5,10 +5,11 @@ global_costmap:
   update_frequency: 2.0
   plugins:
     - {name: static,       type: "costmap_2d::StaticLayer"}
-    #- {name: obstacles,    type: "costmap_2d::ObstacleLayer"}
+    - {name: obstacles,    type: "costmap_2d::ObstacleLayer"}
     - {name: inflation,    type: "costmap_2d::InflationLayer"}
 
   # Layer configuration
   #static:
-  #obstacles:
+  obstacles:
+    observation_persistence: 10.0
   #inflation:
