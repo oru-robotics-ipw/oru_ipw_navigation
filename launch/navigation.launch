@@ -1,11 +1,12 @@
 <launch>
   <arg name="hrp_ns" default="/hrp/" />
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
 
   <rosparam command="load" file="$(find social_compliance_layer)/cfg/behavior_parameters.yaml" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <remap from="odom" to="$(arg hrp_ns)odom" />
-    <remap from="cmd_vel" to="$(arg hrp_ns)cmd_vel" />
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)" />
     <param name="TebLocalPlannerROS/odom_topic" value="$(arg hrp_ns)odom" />
     <!-- <param name="planner_frequency" value="0.25" /> -->
     <param name="controller_frequency" value="10.0" />
