@@ -66,6 +66,7 @@ TebLocalPlannerROS:
   # Obstacles
 
   min_obstacle_dist: 0.3
+  include_dynamic_obstacles: True
   include_costmap_obstacles: True
   costmap_obstacles_behind_robot_dist: 1.0
   obstacle_poses_affected: 30
@@ -106,8 +107,9 @@ TebLocalPlannerROS:
   obstacle_heading_threshold: 0.45
   visualize_hc_graph: False
 
-  # Costmap converter plugin   
-  costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSMCCH"
+  # Costmap converter plugin
+  # These are a nice idea but work poorly.
+  #costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSMCCH"
   #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSRANSAC"
   #costmap_converter_plugin: "costmap_converter::CostmapToLinesDBSMCCH"
   #costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSConcaveHull"
