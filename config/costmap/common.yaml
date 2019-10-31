@@ -87,7 +87,7 @@ social_compliance:
   groups_topic: /spencer/perception/tracked_groups
   people_topic: /spencer/perception/tracked_persons_confirmed_by_HOG_or_upper_body_or_moving
   # Parameters
-  behavior_name: polite
+  behavior_name: rude
   dynamic_scene: true
   human_radius: 0.3
   prediction_horizon: 3
