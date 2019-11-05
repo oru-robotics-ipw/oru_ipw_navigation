@@ -1,0 +1,12 @@
+controller_frequency: 10.0
+base_local_planner: teb_local_planner/TebLocalPlannerROS
+base_global_planner: global_planner/GlobalPlanner
+recovery_behaviors:
+  - {name: conservative_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
+  #- {name: rotate_recovery, type: rotate_recovery/RotateRecovery}
+  - {name: aggressive_reset, type: clear_costmap_recovery/ClearCostmapRecovery}
+
+conservative_reset:
+  reset_distance: 3.0
+aggressive_reset:
+  reset_distance: 1.0
