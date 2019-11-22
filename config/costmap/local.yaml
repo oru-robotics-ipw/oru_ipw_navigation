@@ -12,8 +12,8 @@ local_costmap:
   plugins:
     - {name: obstacles_camera,  type: "costmap_2d::ObstacleLayer"}
     - {name: obstacles_laser,   type: "costmap_2d::VoxelLayer"}
-    - {name: inflation,         type: "costmap_2d::InflationLayer"}
     - {name: social_compliance, type: "social_compliance_layer::SocialComplianceLayer"}
+    - {name: inflation,         type: "costmap_2d::InflationLayer"}
 
   # Layer configuration
   #obstacles:

@@ -34,7 +34,7 @@ TebLocalPlannerROS:
   dt_ref: 0.3
   dt_hysteresis: 0.1
   global_plan_overwrite_orientation: True
-  max_global_plan_lookahead_dist: 3.0
+  max_global_plan_lookahead_dist: 2.0
   feasibility_check_no_poses: 5
 
   # Robot
@@ -95,7 +95,7 @@ TebLocalPlannerROS:
 
   # Homotopy Class Planner
 
-  enable_homotopy_class_planning: False
+  enable_homotopy_class_planning: True
   enable_multithreading: True
   simple_exploration: False
   max_number_classes: 2
